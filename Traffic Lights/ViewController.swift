@@ -33,13 +33,13 @@ class ViewController: UIViewController {
         greenLights.alpha = lightIsOff
         
         redLights.layer.masksToBounds = true
-        redLights.layer.cornerRadius = 20
+        redLights.layer.cornerRadius = redLights.frame.width/2
         
         yellowLights.layer.masksToBounds = true
-        yellowLights.layer.cornerRadius = 20
+        yellowLights.layer.cornerRadius = yellowLights.frame.width/2
         
         greenLights.layer.masksToBounds = true
-        greenLights.layer.cornerRadius = 20
+        greenLights.layer.cornerRadius = greenLights.frame.width/2
         
     }
     
