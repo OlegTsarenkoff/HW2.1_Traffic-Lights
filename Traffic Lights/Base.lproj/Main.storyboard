@@ -21,26 +21,29 @@
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Start!"/>
+                                <connections>
+                                    <action selector="tappedNextButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFO-cS-W6T"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="KS7-IY-qoA">
-                                <rect key="frame" x="100" y="94" width="214" height="344"/>
+                                <rect key="frame" x="170" y="94" width="74" height="344"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0r-uf-4LR">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="48"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GV-40-F7l">
-                                        <rect key="frame" x="0.0" y="148" width="214" height="48"/>
+                                        <rect key="frame" x="0.0" y="148" width="74" height="48"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPw-by-yh1">
-                                        <rect key="frame" x="0.0" y="296" width="214" height="48"/>
+                                        <rect key="frame" x="0.0" y="296" width="74" height="48"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" systemColor="systemGreenColor"/>
@@ -63,11 +66,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUa-gS-K1v" secondAttribute="trailing" constant="100" id="DwL-Qf-UGk"/>
                             <constraint firstItem="KS7-IY-qoA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Hhq-ik-ljc"/>
                             <constraint firstItem="oUa-gS-K1v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QR1-VJ-WeM"/>
-                            <constraint firstItem="KS7-IY-qoA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="VET-vD-sM1"/>
+                            <constraint firstItem="KS7-IY-qoA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="VET-vD-sM1"/>
                             <constraint firstItem="KS7-IY-qoA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="X50-gc-Y1E"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KS7-IY-qoA" secondAttribute="trailing" constant="100" id="hdD-ow-MTP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KS7-IY-qoA" secondAttribute="trailing" constant="170" id="hdD-ow-MTP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLights" destination="qPw-by-yh1" id="Yhe-vx-bZF"/>
+                        <outlet property="redLights" destination="G0r-uf-4LR" id="Oro-G8-Ap8"/>
+                        <outlet property="startButton" destination="oUa-gS-K1v" id="2yS-ON-xsF"/>
+                        <outlet property="yellowLights" destination="1GV-40-F7l" id="HIB-d0-PXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
