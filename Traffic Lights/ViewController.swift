@@ -8,7 +8,7 @@
 import UIKit
 
 enum CurrentLight {
-    case red, yellow, green
+    case red, yellow, green, redAndYellow
 }
 
 class ViewController: UIViewController {
@@ -51,9 +51,9 @@ class ViewController: UIViewController {
             redLights.alpha = lightIsOn
             yellowLights.alpha = lightIsOff
             greenLights.alpha = lightIsOff
-            currentLight = .yellow
-        case .yellow:
-            redLights.alpha = lightIsOff
+            currentLight = .redAndYellow
+        case .redAndYellow:
+            redLights.alpha = lightIsOn
             yellowLights.alpha = lightIsOn
             greenLights.alpha = lightIsOff
             currentLight = .green
@@ -61,6 +61,11 @@ class ViewController: UIViewController {
             redLights.alpha = lightIsOff
             yellowLights.alpha = lightIsOff
             greenLights.alpha = lightIsOn
+            currentLight = .yellow
+        case .yellow:
+            redLights.alpha = lightIsOff
+            yellowLights.alpha = lightIsOn
+            greenLights.alpha = lightIsOff
             currentLight = .red
         }
         
