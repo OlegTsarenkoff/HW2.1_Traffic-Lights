@@ -12,10 +12,9 @@ enum CurrentLight {
 }
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var redLights: UILabel!
-    @IBOutlet weak var yellowLights: UILabel!
-    @IBOutlet weak var greenLights: UILabel!
+    @IBOutlet var redLights: UIView!
+    @IBOutlet var yellowLights: UIView!
+    @IBOutlet var greenLights: UIView!
     
     @IBOutlet weak var startButton: UIButton!
     
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startButton.layer.cornerRadius = 10
+        startButton.layer.cornerRadius = 20
         
         redLights.alpha = lightIsOff
         yellowLights.alpha = lightIsOff
@@ -50,12 +49,9 @@ class ViewController: UIViewController {
         case .red:
             redLights.alpha = lightIsOn
             yellowLights.alpha = lightIsOff
-            greenLights.alpha = lightIsOff
             currentLight = .redAndYellow
         case .redAndYellow:
-            redLights.alpha = lightIsOn
             yellowLights.alpha = lightIsOn
-            greenLights.alpha = lightIsOff
             currentLight = .green
         case .green:
             redLights.alpha = lightIsOff
@@ -63,7 +59,6 @@ class ViewController: UIViewController {
             greenLights.alpha = lightIsOn
             currentLight = .yellow
         case .yellow:
-            redLights.alpha = lightIsOff
             yellowLights.alpha = lightIsOn
             greenLights.alpha = lightIsOff
             currentLight = .red
